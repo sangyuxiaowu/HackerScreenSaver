@@ -44,6 +44,7 @@ namespace Hacker
             //预览
             SetParent(this.Handle, intPtr);
             isPreviewMode = true;
+            picLogo.Visible = true;
         }
 
         
