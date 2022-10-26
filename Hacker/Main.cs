@@ -1,0 +1,102 @@
+﻿using Gma.System.MouseKeyHook;
+using System;
+using System.Drawing;
+using System.Runtime.InteropServices;
+using System.Windows.Forms;
+
+namespace Hacker
+{
+    public partial class Main : Form
+    {
+
+        /// <summary>
+        /// 更改父窗体
+        /// </summary>
+        /// <param name="hWndChild"></param>
+        /// <param name="hWndNewParent"></param>
+        /// <returns></returns>
+        [DllImport("user32.dll")]
+        private static extern IntPtr SetParent(IntPtr hWndChild, IntPtr hWndNewParent);
+
+        /// <summary>
+        /// 是否是预览模式
+        /// </summary>
+        private bool isPreviewMode = false;
+
+        /// <summary>
+        /// 全局鼠标键盘事件管理
+        /// </summary>
+        private IKeyboardMouseEvents m_GlobalHook;
+        public Main()
+        {
+            InitializeComponent();
+
+            // 鼠标键盘事件用于结束屏保
+            m_GlobalHook = Hook.GlobalEvents();
+            m_GlobalHook.MouseClick += M_GlobalHook_MouseClick;
+            m_GlobalHook.KeyPress += M_GlobalHook_KeyPress;
+            m_GlobalHook.MouseMove += M_GlobalHook_MouseMove;
+        }
+
+        public Main(IntPtr intPtr)
+        {
+            InitializeComponent();
+            //预览
+            SetParent(this.Handle, intPtr);
+            isPreviewMode = true;
+        }
+
+        
+        private void Main_Load(object sender, EventArgs e)
+        {
+            //webB.Url = new Uri("https://geektyper.com/SCP");
+            webB.Navigate(Application.StartupPath + "\\html\\hacker.html");
+        }
+
+        private void M_GlobalHook_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void M_GlobalHook_MouseClick(object sender, MouseEventArgs e)
+        {
+            Application.Exit();
+        }
+
+
+        private bool isActive = false;
+        private Point mouseLocation;
+        /// <summary>
+        /// 鼠标动了一定程度，就结束屏保
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void M_GlobalHook_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (isPreviewMode) return;
+            if (!isActive)
+            {
+                isActive = true;
+                mouseLocation = new Point(e.X, e.Y);
+                return;
+            }
+
+            if ((Math.Abs(e.X - mouseLocation.X) > 10) ||
+                (Math.Abs(e.Y - mouseLocation.Y) > 10))
+            {
+                Application.Exit();
+            }
+        }
+
+        private void Main_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            if (!isPreviewMode)
+            {
+                m_GlobalHook.MouseClick -= M_GlobalHook_MouseClick;
+                m_GlobalHook.KeyPress -= M_GlobalHook_KeyPress;
+                m_GlobalHook.MouseMove -= M_GlobalHook_MouseMove;
+                m_GlobalHook.Dispose();
+            }
+        }
+    }
+}

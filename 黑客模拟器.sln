@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32901.215
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hacker", "Hacker\Hacker.csproj", "{00ADE647-9EAA-40A1-989B-F32217C33402}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{00ADE647-9EAA-40A1-989B-F32217C33402}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00ADE647-9EAA-40A1-989B-F32217C33402}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{00ADE647-9EAA-40A1-989B-F32217C33402}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{00ADE647-9EAA-40A1-989B-F32217C33402}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7C0526A0-748E-42CE-86E1-23C464048BCF}
+	EndGlobalSection
+EndGlobal
