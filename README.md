@@ -1,5 +1,20 @@
 # Hacker Screen Saver
 
-.NET develops a screen saver for learning reference. 
+.NET develops a screen saver. 
 
-.NET å¼€å‘ä¸€æ¬¾å±å¹•ä¿æŠ¤ç¨‹åºï¼Œä¾›å­¦ä¹ å‚è€ƒã€‚
+ÒÑÌí¼ÓÉèÖÃ¹¦ÄÜ£¬¿ÉÒÔÑ¡Ôñ±¾µØÍøÒ³Ò²¿ÉÒÔÉèÖÃ×Ô¶¨ÒåµÄ URL µØÖ·¡£
+
+Èí¼ş×ÔÉíÌá¹© 2 ¸öÍøÒ³ÆÁ±£¡£
+
+
+## Ä¬ÈÏ Hacker Typer
+
+![Hacker Typer](doc/2.png)
+
+## Love
+
+![Love](doc/1.png)
+
+# ×¢Òâ
+
+×ÔĞĞÉè¼ÆÍøÒ³µÄÊ±ºòÇë¿¼ÂÇ IE µÄ¼æÈİĞÔ£¬ÎªÁË³ÌĞò¼òÒ×ÈÔ²ÉÓÃÁË WebBrowser  

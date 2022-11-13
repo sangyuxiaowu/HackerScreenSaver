@@ -41,8 +41,9 @@ namespace Hacker
 
         static void ShowSetting()
         {
-            MessageBox.Show("这个屏幕保护程序没有可以设置的选项。","黑客模拟器",MessageBoxButtons.OK,MessageBoxIcon.Information);
-            Application.Exit();
+            //MessageBox.Show("这个屏幕保护程序没有可以设置的选项。","黑客模拟器",MessageBoxButtons.OK,MessageBoxIcon.Information);
+            Application.Run(new SetConfig());
+            //Application.Exit();
         }
     }
 }

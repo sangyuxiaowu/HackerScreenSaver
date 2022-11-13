@@ -1,6 +1,7 @@
 ﻿using Gma.System.MouseKeyHook;
 using System;
 using System.Drawing;
+using System.IO;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
@@ -47,11 +48,32 @@ namespace Hacker
             picLogo.Visible = true;
         }
 
-        
+        /// <summary>
+        /// 程序启动目录
+        /// </summary>
+        public readonly string appPath = Path.GetDirectoryName(typeof(Program).Assembly.Location);
+
+
         private void Main_Load(object sender, EventArgs e)
         {
-            //webB.Url = new Uri("https://geektyper.com/SCP");
-            webB.Navigate(Application.StartupPath + "\\html\\hacker.html");
+            var url = Properties.Settings.Default.uInfo;
+            bool isLocal = Properties.Settings.Default.isLocal;
+            // 未设置或未空，则默认
+            if (string.IsNullOrWhiteSpace(url))
+            {
+                webB.Navigate(appPath + "\\html\\hacker.html");
+            }
+            else
+            {
+                if (isLocal)
+                {
+                    webB.Navigate(url);
+                }
+                else
+                {
+                    webB.Url = new Uri(url);
+                }
+            }
         }
 
         private void M_GlobalHook_KeyPress(object sender, KeyPressEventArgs e)
@@ -99,5 +121,6 @@ namespace Hacker
                 m_GlobalHook.Dispose();
             }
         }
+
     }
 }
