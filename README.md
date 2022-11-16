@@ -8,7 +8,7 @@ Hacker Screen Saver 是一款 .NET 设计的屏幕保护程序，可以显示 HT
 
 已添加设置功能，可以选择本地网页也可以设置自定义的 URL 地址。软件自身提供 2 个网页屏保。
 
-[点击下载最新 v1.2 版](https://github.com/sangyuxiaowu/HackerScreenSaver/releases/download/v1.2/HackerScreenSaver.zip)
+[👉 点击下载最新 v1.2 版](https://github.com/sangyuxiaowu/HackerScreenSaver/releases/download/v1.2/HackerScreenSaver.zip)
 
 # 使用介绍
 
