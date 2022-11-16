@@ -46,5 +46,17 @@ namespace Hacker.Properties {
                 this["uInfo"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("100")]
+        public int Opacity {
+            get {
+                return ((int)(this["Opacity"]));
+            }
+            set {
+                this["Opacity"] = value;
+            }
+        }
     }
 }

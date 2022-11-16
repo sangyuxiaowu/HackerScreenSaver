@@ -60,6 +60,7 @@
             this.picLogo.TabIndex = 1;
             this.picLogo.TabStop = false;
             this.picLogo.Visible = false;
+            this.picLogo.Click += new System.EventHandler(this.picLogo_Click);
             // 
             // Main
             // 

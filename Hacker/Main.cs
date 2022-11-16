@@ -56,6 +56,11 @@ namespace Hacker
 
         private void Main_Load(object sender, EventArgs e)
         {
+            // 不透明度生效
+            if (Properties.Settings.Default.Opacity > 9 && Properties.Settings.Default.Opacity < 100) {
+                this.Opacity = (double)Properties.Settings.Default.Opacity / 100;
+            }
+
             var url = Properties.Settings.Default.uInfo;
             bool isLocal = Properties.Settings.Default.isLocal;
             // 未设置或未空，则默认
@@ -122,5 +127,9 @@ namespace Hacker
             }
         }
 
+        private void picLogo_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

@@ -4,8 +4,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="renderer" content="webkit" />
     <title>爱的表白墙</title>
-    <meta name="keywords" content="桑桑,宁宁">
-    <meta name="description" content="桑桑爱宁宁，记录爱你的每一天！">
     <style>
     body{margin:0;padding:0;background:#ffe;font-size:12px;overflow:auto}
 #mainDiv{width:100%;height:100%}
@@ -59,7 +57,10 @@ function showMessages(){adjustWordsPosition();$('#messages').fadeIn(5000,functio
 function adjustWordsPosition(){$('#words').css("position","absolute");$('#words').css("top",$("#garden").position().top+195);$('#words').css("left",$("#garden").position().left+70);}
 function adjustCodePosition(){$('#code').css("margin-top",($("#garden").height()-$("#code").height())/2);}
 function showLoveU(){$('#loveu').fadeIn(3000);}
-var offsetX,offsetY;$(function(){offsetX=$("#loveHeart").width()/2;offsetY=$("#loveHeart").height()/2-55;var together=new Date();together.setFullYear(2018,2,9);together.setHours(20);together.setMinutes(0);together.setSeconds(0);together.setMilliseconds(0);if(!document.createElement('canvas').getContext){var msg=document.createElement("div");msg.id="errorMsg";msg.innerHTML="Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+";document.body.appendChild(msg);$("#code").css("display","none")
+var offsetX,offsetY;$(function(){offsetX=$("#loveHeart").width()/2;offsetY=$("#loveHeart").height()/2-55;var together=new Date();
+together.setFullYear(2018,2,9);
+together.setHours(20,0,0,0);
+if(!document.createElement('canvas').getContext){var msg=document.createElement("div");msg.id="errorMsg";msg.innerHTML="Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+";document.body.appendChild(msg);$("#code").css("display","none")
 $("#copyright").css("position","absolute");$("#copyright").css("bottom","10px");document.execCommand("stop");}else{setTimeout(function(){startHeartAnimation();},5000);timeElapse(together);setInterval(function(){timeElapse(together);},500);adjustCodePosition();$("#code").typewriter();}});
     </script>
 

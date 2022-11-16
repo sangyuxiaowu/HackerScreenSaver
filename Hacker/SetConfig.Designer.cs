@@ -35,7 +35,11 @@
             this.radLocal = new System.Windows.Forms.RadioButton();
             this.btnOk = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.optBar = new System.Windows.Forms.TrackBar();
             this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.optBar)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -62,7 +66,6 @@
             // 
             // txtInfo
             // 
-            this.txtInfo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtInfo.Location = new System.Drawing.Point(19, 85);
             this.txtInfo.Multiline = true;
             this.txtInfo.Name = "txtInfo";
@@ -115,13 +118,35 @@
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.optBar);
+            this.groupBox2.Location = new System.Drawing.Point(12, 172);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(244, 82);
+            this.groupBox2.TabIndex = 3;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "不透明度";
+            // 
+            // optBar
+            // 
+            this.optBar.Location = new System.Drawing.Point(12, 30);
+            this.optBar.Maximum = 100;
+            this.optBar.Minimum = 10;
+            this.optBar.Name = "optBar";
+            this.optBar.Size = new System.Drawing.Size(220, 45);
+            this.optBar.TabIndex = 0;
+            this.optBar.TickFrequency = 10;
+            this.optBar.Value = 100;
+            // 
             // SetConfig
             // 
             this.AcceptButton = this.btnOk;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnCancel;
-            this.ClientSize = new System.Drawing.Size(408, 173);
+            this.ClientSize = new System.Drawing.Size(408, 266);
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnOk);
             this.Controls.Add(this.groupBox1);
@@ -133,6 +158,9 @@
             this.Load += new System.EventHandler(this.SetConfig_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.optBar)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -146,5 +174,7 @@
         private System.Windows.Forms.RadioButton radNet;
         private System.Windows.Forms.RadioButton radLocal;
         private System.Windows.Forms.Label labTip;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.TrackBar optBar;
     }
 }

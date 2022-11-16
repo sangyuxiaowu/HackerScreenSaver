@@ -141,7 +141,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="hack.ico" />
-    <Content Include="html\love.html" />
     <None Include="Resources\hack.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

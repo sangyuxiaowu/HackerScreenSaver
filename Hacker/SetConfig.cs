@@ -51,6 +51,7 @@ namespace Hacker
             }
             Properties.Settings.Default.isLocal = radLocal.Checked;
             Properties.Settings.Default.uInfo = txtInfo.Text;
+            Properties.Settings.Default.Opacity = optBar.Value;
             Properties.Settings.Default.Save();
             Application.Exit();
         }
@@ -68,6 +69,7 @@ namespace Hacker
             var url = Properties.Settings.Default.uInfo;
             bool isLocal = Properties.Settings.Default.isLocal;
 
+            optBar.Value = Properties.Settings.Default.Opacity;
             labTip.Text = isLocal?"点击下方文本框选择一个网页文件":"请在下方输入一个网址";
             radLocal.Checked= isLocal;
             radNet.Checked= !isLocal;
