@@ -2,22 +2,12 @@
 using System;
 using System.Drawing;
 using System.IO;
-using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
 namespace Hacker
 {
     public partial class Main : Form
     {
-
-        /// <summary>
-        /// 更改父窗体
-        /// </summary>
-        /// <param name="hWndChild"></param>
-        /// <param name="hWndNewParent"></param>
-        /// <returns></returns>
-        [DllImport("user32.dll")]
-        private static extern IntPtr SetParent(IntPtr hWndChild, IntPtr hWndNewParent);
 
         /// <summary>
         /// 是否是预览模式
@@ -43,7 +33,7 @@ namespace Hacker
         {
             InitializeComponent();
             //预览
-            SetParent(this.Handle, intPtr);
+            ScreenHelper.SetParent(this.Handle, intPtr);
             isPreviewMode = true;
             picLogo.Visible = true;
         }

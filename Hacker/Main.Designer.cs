@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.webB = new System.Windows.Forms.WebBrowser();
             this.picLogo = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
@@ -70,6 +71,7 @@
             this.Controls.Add(this.picLogo);
             this.Controls.Add(this.webB);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Main";
             this.Text = "Hacker Screen Saver";
             this.TopMost = true;
