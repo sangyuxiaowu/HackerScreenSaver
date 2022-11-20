@@ -2,7 +2,7 @@
 
 .NET develops a screen saver. 
 
-Hacker Screen Saver 是一款 .NET 设计的屏幕保护程序，可以显示 HTML 页面，你可以将黑客模拟器的网页，或者爱心代码网页设置为你的 Windows 电脑屏保。
+Hacker Screen Saver 是一款 .NET 设计的屏幕保护程序，可以显示 HTML 页面，你可以将黑客模拟器的网页，摸鱼时需要的windows更新，或者爱心代码网页设置为你的 Windows 电脑屏保。
 
 软件代码介绍的相关文章：[《用.NET设计一个假装黑客的屏幕保护程序》](https://mp.weixin.qq.com/s/WAsWQINJA3cletktYb-TKw)
 
