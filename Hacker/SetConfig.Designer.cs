@@ -38,7 +38,6 @@
             this.btnCancel = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.optBar = new System.Windows.Forms.TrackBar();
-            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.optBar)).BeginInit();
@@ -141,17 +140,6 @@
             this.optBar.TickFrequency = 10;
             this.optBar.Value = 100;
             // 
-            // button1
-            // 
-            this.button1.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.button1.Location = new System.Drawing.Point(295, 172);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "取消";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // SetConfig
             // 
             this.AcceptButton = this.btnOk;
@@ -159,7 +147,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnCancel;
             this.ClientSize = new System.Drawing.Size(408, 266);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnOk);
@@ -191,6 +178,5 @@
         private System.Windows.Forms.Label labTip;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TrackBar optBar;
-        private System.Windows.Forms.Button button1;
     }
 }

@@ -111,9 +111,5 @@ namespace Hacker
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            ScreenHelper.SetToProgman(this.Handle);
-        }
     }
 }

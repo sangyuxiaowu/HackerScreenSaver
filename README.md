@@ -8,7 +8,7 @@ Hacker Screen Saver 是一款 .NET 设计的屏幕保护程序，可以显示 HT
 
 已添加设置功能，可以选择本地网页也可以设置自定义的 URL 地址。软件自身提供 2 个网页屏保。
 
-[👉 点击下载最新 v1.2 版](https://github.com/sangyuxiaowu/HackerScreenSaver/releases/download/v1.2/HackerScreenSaver.zip)
+[👉 点击下载最新 v1.3 版](https://github.com/sangyuxiaowu/HackerScreenSaver/releases/download/v1.3/HackerScreenSaver.zip)
 
 # 使用介绍
 
@@ -51,6 +51,12 @@ Hacker Screen Saver 是一款 .NET 设计的屏幕保护程序，可以显示 HT
 默认本地网页设置，位于 `html\hacker.html`，原型来自古老版本的 [NEO Hacker Typer](https://geektyper.com/scp/) 并做了 IE 适配。
 
 更多效果可前往 [GeekTyper](https://geektyper.com/) 
+
+### 摸鱼小能手 Update
+
+![Update](doc/0.png)
+
+模拟 Windows 10 更新界面，位于 `html\update.html`，长时间不用电脑自动摸鱼掩护。
 
 ### 爱心代码 Love
 
